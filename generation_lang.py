@@ -21,7 +21,7 @@ sheet = wb.sheet_by_index(0)
 # Parse XLSX
 for col in range(1, sheet.ncols):
     lang = sheet.cell_value(0, col).lower()
-    nameNewFile = "message."+lang+".xlf"
+    nameNewFile = "messages."+lang+".xlf"
     with open(nameNewFile, "w", encoding="utf-8") as file:
         start_file = '<?xml version="1.0" encoding="utf-8"?> \n' \
                      '<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0" srcLang="'+lang+'"' \
